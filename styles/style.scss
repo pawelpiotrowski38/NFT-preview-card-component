@@ -1,0 +1,122 @@
+@import "variables";
+@import "globals";
+
+main {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.main-div {
+    max-width: 350px;
+    margin: auto;
+    padding: 24px 24px 30px 24px;
+    background-color: $cardDarkBlue;
+    border-radius: 10px;
+    box-shadow: 0 14px 40px 20px rgba(0, 0, 0, 0.1);
+
+    h3 {
+        color: $white;
+        font-weight: 600;
+        margin: 20px 0;
+
+        &:hover {
+            color: $cyan;
+            cursor: pointer;
+        }
+    }
+
+    p {
+        color: $softBlue;
+        font-weight: 300;
+        margin-bottom: 25px;
+    }
+
+    hr {
+        margin: 20px 0;
+        color: $lineDarkBlue;
+    }
+}
+
+.image-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+
+    #main-image {
+        max-width: 100%;
+        border-radius: 10px;
+    }
+
+    #hover-image {
+        display: none;
+        position: absolute;
+    }
+
+    &:hover {
+        cursor: pointer;
+        background-color: $cyan;
+        #main-image {
+            opacity: 0.5;
+        }
+        
+
+        #hover-image {
+            display: block;
+        }
+    }
+}
+
+.eth-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+
+    h4 {
+        color: $cyan;
+    }
+
+    img, p {
+        margin-bottom: 0;
+        margin-right: 7px;
+    }
+}
+
+.left-eth-div {
+    display: flex;
+    align-items: center;
+}
+
+.right-eth-div {
+    display: flex;
+    align-items: center;
+}
+
+.creator-div {
+    display: flex;
+    align-items: center;
+
+    img {
+        width: 11%;
+        margin-bottom: 0;
+        margin-right: 15px;
+        border: 1px solid $white;
+        border-radius: 50%;
+    }
+
+    p {
+        margin-bottom: 0;
+        font-size: 16px;
+    }
+
+    #name {
+        color: $white;
+
+        &:hover {
+            color: $cyan;
+            cursor: pointer;
+        }
+    }
+}
